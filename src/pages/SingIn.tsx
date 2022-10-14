@@ -1,4 +1,6 @@
 import { Envelope, Key } from "phosphor-react";
+import { FormEvent, useState } from "react";
+import axios from "axios";
 import { Button } from "../components/Button";
 import { Checkbox } from "../components/Checkbox";
 import { Heading } from "../components/Heading";
@@ -7,6 +9,19 @@ import { Text } from "../components/Text";
 import { TextInput } from "../components/TextInput";
 
 export function SingIn() {
+  const [isUserSingedIn, setIsUserSingedIn] = useState(false);
+
+  async function handlerSubmit(event: FormEvent) {
+    event.preventDefault();
+
+    await axios.post("sessions", {
+      email: "contato@teste.com",
+      password: "12345678",
+    });
+
+    setIsUserSingedIn(true);
+  }
+
   return (
     <div className="w-screen h-screen bg-cyan-50 flex items-center justify-center">
       <main className="rounded border-cyan-800 border-2 w-full max-w-[600px] px-16 py-12 flex flex-col items-center">
@@ -18,7 +33,12 @@ export function SingIn() {
           <Text>Faça o login para usar a plataforma!</Text>
         </header>
 
-        <form className="flex flex-col w-full items-stretch mt-12">
+        {isUserSingedIn && <Text size="lg">Logado com sucesso!</Text>}
+
+        <form
+          onSubmit={handlerSubmit}
+          className="flex flex-col w-full items-stretch mt-12"
+        >
           <label htmlFor="email" className="flex flex-col gap-4 mb-4">
             <Text className="font-bold text-cyan-800">Endereço de e-mail</Text>
             <TextInput.Root>
