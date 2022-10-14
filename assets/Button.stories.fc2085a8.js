@@ -1,0 +1,2 @@
+import{B as t}from"./index.a89ab348.js";import{j as o}from"./jsx-runtime.8f67496d.js";import"./clsx.m.d2ef6fdf.js";import"./index.cb98f495.js";import"./iframe.c61b3a64.js";const i={title:"Components/Button",component:t,args:{children:"Click on the button"}},l={},m={args:{asChild:!0,children:o("a",{href:"#",children:"Button with A tag"})},argTypes:{children:{table:{disable:!0}},asChild:{table:{disable:!0}}}},u=["Default","CustomComponent"];export{m as CustomComponent,l as Default,u as __namedExportsOrder,i as default};
+//# sourceMappingURL=Button.stories.fc2085a8.js.map
