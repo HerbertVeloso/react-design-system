@@ -9,6 +9,11 @@ module.exports = {
       white: "#FFF",
       red: "#DC2626",
 
+      gray: {
+        400: "#9CA3AF",
+        600: "#4B5563",
+      },
+
       cyan: {
         50: "#ECFEFF",
         100: "#CFFAFE",
@@ -18,11 +23,6 @@ module.exports = {
       teal: {
         300: "#5EEAD4",
         400: "#2DD4BF",
-      },
-
-      gray: {
-        400: "#9CA3AF",
-        600: "#4B5563",
       },
     },
     fontSize: {
